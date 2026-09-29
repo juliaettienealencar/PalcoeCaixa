@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+}
+
+body {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin: 25px 0 10px;
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.palco {
+  width: 100%;
+  max-width: 500px;
+  height: 220px;
+  background-color: #ffffff;
+  border: 3px solid #E5D4FF;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.caixa {
+  width: 70px;
+  height: 70px;
+  background-color: #D0A2F7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* 1. Movimento vertical */
+.vertical {
+  animation: vertical 3s infinite alternate ease-in-out;
+}
+
+@keyframes vertical {
+  from {
+    top: 10px;
+  }
+  to {
+    top: 140px;
+  }
+}
+
+/* 2. Movimento horizontal */
+.horizontal {
+  animation: horizontal 3s infinite alternate ease-in-out;
+}
+
+@keyframes horizontal {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 410px;
+  }
+}
+
+/* 3. Movimento diagonal */
+.diagonal {
+  animation: diagonal 3s infinite alternate ease-in-out;
+}
+
+@keyframes diagonal {
+  from {
+    top: 10px;
+    left: 10px;
+  }
+  to {
+    top: 140px;
+    left: 410px;
+  }
+}
+
+/* 4. Velocidade e repetição */
+.velocidade {
+  animation: horizontal 5s infinite alternate ease-in-out;
+}
+
+/* 5. Animação em etapas */
+.etapas {
+  animation: etapas 4s infinite alternate ease-in-out;
+}
+
+@keyframes etapas {
+  0% {
+    top: 10px;
+    left: 10px;
+    background-color: #769FCD;
+  }
+  50% {
+    top: 140px;
+    left: 200px;
+    background-color: #B9D7EA;
+  }
+  100% {
+    top: 10px;
+    left: 10px;
+    background-color: #D6E6F2;
+  }
+}
+
+/* 6. Hover */
+.interativa:hover {
+  background-color: #E5D4FF;
+}
+
+/* 7. Pausar animação */
+.caixa:hover {
+  animation-play-state: paused;
+}
+
+/* 8. Active */
+.interativa:active {
+  background-color: #E5D4FF;
+  transform: scale(0.85);
+}
+
+/* 9. Focus-visible */
+.caixa:focus-visible {
+  outline: 4px solid #F1EAFF;
+  outline-offset: 4px;
+}
+
+/* Desafio extra */
+.desafio {
+  animation: desafio 4s infinite alternate ease-in-out;
+}
+
+@keyframes desafio {
+  0% {
+    top: 10px;
+    left: 10px;
+    transform: scale(1);
+    background-color: #71C9CE;
+  }
+  50% {
+    top: 140px;
+    left: 200px;
+    transform: scale(1.3);
+    background-color: #CBF1F5;
+  }
+  100% {
+    top: 10px;
+    left: 10px;
+    transform: scale(1);
+    background-color: #CBF1F5;
+  }
+}
